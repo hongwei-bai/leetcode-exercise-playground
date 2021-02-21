@@ -1,8 +1,10 @@
 package hongwei.leetcode.playground
 
-import hongwei.leetcode.playground.leetcode._1146SnapshotArray
-import hongwei.leetcode.playground.leetcode._29DivideTwoIntegers
+import hongwei.leetcode.playground.leetcodecba.M54SpiralMatrix
+import hongwei.leetcode.playground.leetcodecba.M55JumpGame
+import hongwei.leetcode.playground.leetcodecba.M56MergeIntervals
+import hongwei.leetcode.playground.leetcodecba.M56MergeIntervals2
 
 fun main() {
-    _1146SnapshotArray().test()
+    M56MergeIntervals2().test()
 }
