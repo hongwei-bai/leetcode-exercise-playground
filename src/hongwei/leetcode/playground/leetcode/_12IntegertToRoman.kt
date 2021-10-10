@@ -1,23 +1,23 @@
 package hongwei.leetcode.playground.leetcode
 
-import hongwei.leetcode.playground.common.Log
+import hongwei.leetcode.playground.common.LogJava
 import java.lang.StringBuilder
 
 class _12IntegertToRoman {
     fun test() {
-        Log.i("aaaa", "1 -> ${intToRoman(1)}")
-        Log.i("aaaa", "5 -> ${intToRoman(5)}")
-        Log.i("aaaa", "10 -> ${intToRoman(10)}")
-        Log.i("aaaa", "50 -> ${intToRoman(50)}")
-        Log.i("aaaa", "100 -> ${intToRoman(100)}")
-        Log.i("aaaa", "500 -> ${intToRoman(500)}")
-        Log.i("aaaa", "1000 -> ${intToRoman(1000)}")
+        LogJava.i("aaaa", "1 -> ${intToRoman(1)}")
+        LogJava.i("aaaa", "5 -> ${intToRoman(5)}")
+        LogJava.i("aaaa", "10 -> ${intToRoman(10)}")
+        LogJava.i("aaaa", "50 -> ${intToRoman(50)}")
+        LogJava.i("aaaa", "100 -> ${intToRoman(100)}")
+        LogJava.i("aaaa", "500 -> ${intToRoman(500)}")
+        LogJava.i("aaaa", "1000 -> ${intToRoman(1000)}")
 
-        Log.i("aaaa", "3 -> ${intToRoman(3)}")
-        Log.i("aaaa", "4 -> ${intToRoman(4)}")
-        Log.i("aaaa", "9 -> ${intToRoman(9)}")
-        Log.i("aaaa", "58 -> ${intToRoman(58)}")
-        Log.i("aaaa", "1994 -> ${intToRoman(1994)}")
+        LogJava.i("aaaa", "3 -> ${intToRoman(3)}")
+        LogJava.i("aaaa", "4 -> ${intToRoman(4)}")
+        LogJava.i("aaaa", "9 -> ${intToRoman(9)}")
+        LogJava.i("aaaa", "58 -> ${intToRoman(58)}")
+        LogJava.i("aaaa", "1994 -> ${intToRoman(1994)}")
     }
 
     /*

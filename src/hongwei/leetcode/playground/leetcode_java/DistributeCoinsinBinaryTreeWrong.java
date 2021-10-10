@@ -1,6 +1,6 @@
 package hongwei.leetcode.playground.leetcode_java;
 
-import hongwei.leetcode.playground.common.Log;
+import hongwei.leetcode.playground.common.LogJava;
 import hongwei.leetcode.playground.common.TreeNode;
 import hongwei.leetcode.playground.IQuestion;
 
@@ -20,7 +20,7 @@ import java.util.Random;
 public class DistributeCoinsinBinaryTreeWrong implements IQuestion {
     @Override
     public void run() {
-        Log.i("aaaa", "------- run -------");
+        LogJava.i("aaaa", "------- run -------");
         Integer[][] input = new Integer[][]{
                 {1, 0, 2},
                 {1, 0, 0, null, 3},
@@ -42,9 +42,9 @@ public class DistributeCoinsinBinaryTreeWrong implements IQuestion {
             int result = distributeCoins(new TreeNode(input[i]));
 //            int result = distributeCoins(input2[i]);
             if (result == ref[i]) {
-                Log.i("aaaa", "case[" + i + "] passed");
+                LogJava.i("aaaa", "case[" + i + "] passed");
             } else {
-                Log.e("aaaa", "!!!!![WRONG]case[" + i + "] failed, result: " + result);
+                LogJava.e("aaaa", "!!!!![WRONG]case[" + i + "] failed, result: " + result);
             }
         }
     }
@@ -73,7 +73,7 @@ Return the number of moves required to make every node have exactly one coin.
         hashMap.clear();
         valueList.clear();
 
-        Log.i("aaaa", "" + root.printTree());
+        LogJava.i("aaaa", "" + root.printTree());
 
         // Preorder traversal.
         List<TreeNode> preorderNodeList = new ArrayList<>();

@@ -1,6 +1,6 @@
 package hongwei.leetcode.playground.leetcode_java;
 
-import hongwei.leetcode.playground.common.Log;
+import hongwei.leetcode.playground.common.LogJava;
 import hongwei.leetcode.playground.common.ListNode;
 import hongwei.leetcode.playground.IQuestion;
 
@@ -15,7 +15,7 @@ import hongwei.leetcode.playground.IQuestion;
 public class MergekSortedLists implements IQuestion {
     @Override
     public void run() {
-        Log.i("aaaa", "------- run -------");
+        LogJava.i("aaaa", "------- run -------");
         ListNode[][] input = new ListNode[][]{
                 {new ListNode(new int[]{1, 4, 5}), new ListNode(new int[]{1, 3, 4}), new ListNode(new int[]{2, 6})},
                 //[[-10,-9,-9,-3,-1,-1,0],[-5],[4],[-8],[],[-9,-6,-5,-4,-2,2,3],[-3,-3,-2,-1,0]]
@@ -30,9 +30,9 @@ public class MergekSortedLists implements IQuestion {
         for (int i = 0; i < input.length; i++) {
             ListNode result = mergeKLists(input[i]);
             if (result.equals(ref[i])) {
-                Log.i("aaaa", "case[" + i + "] passed");
+                LogJava.i("aaaa", "case[" + i + "] passed");
             } else {
-                Log.e("aaaa", "!!!!![WRONG]case[" + i + "] failed, result: " + result);
+                LogJava.e("aaaa", "!!!!![WRONG]case[" + i + "] failed, result: " + result);
             }
         }
     }
@@ -46,7 +46,7 @@ public class MergekSortedLists implements IQuestion {
     }
 
     private ListNode mergeRecursive(ListNode[] lists, int from, int to) {
-        Log.i("aaaa", "recur: " + from + "  -> " + to);
+        LogJava.i("aaaa", "recur: " + from + "  -> " + to);
         if (from >= to) {
             return lists[from];
         }

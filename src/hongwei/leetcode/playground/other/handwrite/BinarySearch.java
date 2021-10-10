@@ -1,6 +1,6 @@
 package hongwei.leetcode.playground.other.handwrite;
 
-import hongwei.leetcode.playground.common.Log;
+import hongwei.leetcode.playground.common.LogJava;
 
 public class BinarySearch {
     public int binarySearch(int[] a, int n, int k) {
@@ -24,6 +24,6 @@ public class BinarySearch {
         BinarySearch binarySearch = new BinarySearch();
         int[] a = { 0, 5, 8, 18, 24, 79 };
         int pos = binarySearch.binarySearch(a, 6, 11);
-        Log.d("pos = " + pos);
+        LogJava.d("pos = " + pos);
     }
 }

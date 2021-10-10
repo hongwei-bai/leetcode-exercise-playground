@@ -1,11 +1,11 @@
 package hongwei.leetcode.playground.leetcode
 
-import hongwei.leetcode.playground.common.Log
+import hongwei.leetcode.playground.common.LogJava
 
 class _29DivideTwoIntegers {
     fun test() {
         val r = divide(-2147483648, -1)
-        Log.i("aaaa", "divide $r")
+        LogJava.i("aaaa", "divide $r")
     }
 
     var array2 = mutableListOf<Int>()

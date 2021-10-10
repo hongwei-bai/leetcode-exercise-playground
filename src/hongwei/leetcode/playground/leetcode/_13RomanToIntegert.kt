@@ -1,6 +1,6 @@
 package hongwei.leetcode.playground.leetcode
 
-import hongwei.leetcode.playground.common.Log
+import hongwei.leetcode.playground.common.LogJava
 
 class _13RomanToIntegert {
     fun test() {
@@ -25,9 +25,9 @@ class _13RomanToIntegert {
         val num = romanToInt(b)
         val result = if (a == num) "[passed]" else "[FAILED!!]"
         if (a == num) {
-            Log.i("aaaa", "$result: $b -> $num")
+            LogJava.i("aaaa", "$result: $b -> $num")
         } else {
-            Log.e("aaaa", "$result: $b -> $num")
+            LogJava.e("aaaa", "$result: $b -> $num")
         }
     }
 

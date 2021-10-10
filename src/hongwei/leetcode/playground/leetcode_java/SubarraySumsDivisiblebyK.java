@@ -1,6 +1,6 @@
 package hongwei.leetcode.playground.leetcode_java;
 
-import hongwei.leetcode.playground.common.Log;
+import hongwei.leetcode.playground.common.LogJava;
 import hongwei.leetcode.playground.IQuestion;
 
 /**
@@ -14,7 +14,7 @@ import hongwei.leetcode.playground.IQuestion;
 public class SubarraySumsDivisiblebyK implements IQuestion {
     @Override
     public void run() {
-        Log.i("aaaa", "------- run -------");
+        LogJava.i("aaaa", "------- run -------");
         int[][] input = new int[][]{{4, 5, 0, -2, -3, 1}, {-7, 2, 3, 0, -9}, {0, 0, 0}};
         int[] input2 = new int[]{5, 3, 4};
         int[] ref = new int[]{7, 6, 6};
@@ -22,9 +22,9 @@ public class SubarraySumsDivisiblebyK implements IQuestion {
         for (int i = 0; i < input.length; i++) {
             int result = subarraysDivByK(input[i], input2[i]);
             if (result == ref[i]) {
-                Log.i("aaaa", "case[" + i + "] passed");
+                LogJava.i("aaaa", "case[" + i + "] passed");
             } else {
-                Log.e("aaaa", "!!!!![WRONG]case[" + i + "] failed, result: " + result);
+                LogJava.e("aaaa", "!!!!![WRONG]case[" + i + "] failed, result: " + result);
             }
         }
     }

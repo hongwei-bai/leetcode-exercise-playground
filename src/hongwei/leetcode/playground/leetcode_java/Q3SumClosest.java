@@ -1,7 +1,7 @@
 package hongwei.leetcode.playground.leetcode_java;
 
 import hongwei.leetcode.playground.IQuestion;
-import hongwei.leetcode.playground.common.Log;
+import hongwei.leetcode.playground.common.LogJava;
 
 import java.util.Arrays;
 
@@ -27,9 +27,9 @@ public class Q3SumClosest implements IQuestion {
         for (int i = 0; i < input.length; i++) {
             int result = threeSumClosest(input[i], targets[i]);
             if (ref[i] == result) {
-                Log.i("aaaa", "case[" + i + "] passed");
+                LogJava.i("aaaa", "case[" + i + "] passed");
             } else {
-                Log.e("aaaa", "!!!!![WRONG]case[" + i + "] failed, result: " + result);
+                LogJava.e("aaaa", "!!!!![WRONG]case[" + i + "] failed, result: " + result);
             }
         }
     }
@@ -55,7 +55,7 @@ public class Q3SumClosest implements IQuestion {
                 if (dist == 0) {
                     return target;
                 }
-                Log.i("aaaa", "dist: " + dist + ", sum: " + sum);
+                LogJava.i("aaaa", "dist: " + dist + ", sum: " + sum);
                 if (dist < minDist) {
                     minDist = dist;
                     if (sum > target) {

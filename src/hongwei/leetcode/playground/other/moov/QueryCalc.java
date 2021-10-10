@@ -2,7 +2,7 @@ package hongwei.leetcode.playground.other.moov;
 
 import java.util.HashMap;
 
-import hongwei.leetcode.playground.common.Log;
+import hongwei.leetcode.playground.common.LogJava;
 import hongwei.leetcode.playground.other.utils.BinarySearch;
 import hongwei.leetcode.playground.other.utils.QSort;
 
@@ -31,7 +31,7 @@ public class QueryCalc {
 
     public void printArray(int[] a) {
         if (null == a) {
-            Log.i("null");
+            LogJava.i("null");
             return;
         }
         String s = "[";
@@ -39,7 +39,7 @@ public class QueryCalc {
             s += a[i] + ",";
         }
         s += a[a.length - 1] + "]";
-        Log.i(s);
+        LogJava.i(s);
     }
 
     public int[] numberOfTaskRunning(int[] start, int[] end, int n, int[] query, int m) {

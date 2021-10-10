@@ -1,6 +1,6 @@
 package hongwei.leetcode.playground.leetcode_java;
 
-import hongwei.leetcode.playground.common.Log;
+import hongwei.leetcode.playground.common.LogJava;
 import hongwei.leetcode.playground.IQuestion;
 
 import java.util.Stack;
@@ -22,9 +22,9 @@ public class ValidParentheses implements IQuestion {
         for (int i = 0; i < input.length; i++) {
             boolean result = isValid(input[i]);
             if (result == ref[i]) {
-                Log.i("aaaa", "case[" + i + "] passed");
+                LogJava.i("aaaa", "case[" + i + "] passed");
             } else {
-                Log.e("aaaa", "!!!!![WRONG]case[" + i + "] failed, result: " + result);
+                LogJava.e("aaaa", "!!!!![WRONG]case[" + i + "] failed, result: " + result);
             }
         }
     }

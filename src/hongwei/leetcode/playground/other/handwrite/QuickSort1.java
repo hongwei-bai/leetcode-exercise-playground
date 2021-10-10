@@ -1,6 +1,6 @@
 package hongwei.leetcode.playground.other.handwrite;
 
-import hongwei.leetcode.playground.common.Log;
+import hongwei.leetcode.playground.common.LogJava;
 
 public class QuickSort1 {
     public void quickSort(int[] a, int low, int high) {
@@ -36,7 +36,7 @@ public class QuickSort1 {
         int[] a = { 3, 4, 1, 5, 9, 6, 2 };
         quickSort1.quickSort(a, 0, 6);
         for (int num : a) {
-            Log.d(num + " ");
+            LogJava.d(num + " ");
         }
     }
 }

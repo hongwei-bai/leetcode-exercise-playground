@@ -1,6 +1,6 @@
 package hongwei.leetcode.playground.other.na2;
 
-import hongwei.leetcode.playground.common.Log;
+import hongwei.leetcode.playground.common.LogJava;
 
 import java.util.ArrayList;
 
@@ -15,14 +15,14 @@ public class QuestionFramework {
         testList.add("qweaaytrewq");// 2
         testList.add("qwertytrkwq");// 1
         for (String s : testList) {
-            Log.d(question1.canBePalindromeByChangingOneCharacter(s));
+            LogJava.d(question1.canBePalindromeByChangingOneCharacter(s));
         }
     }
 
     public static void testQ2() {
         Question2 question2 = new Question2();
         String input = "2\n" + "abc\n" + "bca\n";
-        Log.d("result2: " + question2.calculateMinimumMove(input));
+        LogJava.d("result2: " + question2.calculateMinimumMove(input));
     }
 
     public static void main(String[] args) {

@@ -1,6 +1,6 @@
 package hongwei.leetcode.playground.aus;
 
-import hongwei.leetcode.playground.common.Log;
+import hongwei.leetcode.playground.common.LogJava;
 import hongwei.leetcode.playground.IQuestion;
 
 import java.util.*;
@@ -33,16 +33,16 @@ public class Skedgo implements IQuestion {
         long nano = System.nanoTime();
         Iterable<Character>[] result = test(s1, s2);
         long diff = System.nanoTime() - nano;
-        Log.i(result[0].toString());
-        Log.i(result[1].toString());
-        Log.i("test consumed: " + diff / 1000.0 + " x 10e-6 s.");
+        LogJava.i(result[0].toString());
+        LogJava.i(result[1].toString());
+        LogJava.i("test consumed: " + diff / 1000.0 + " x 10e-6 s.");
 
         long nano2 = System.nanoTime();
         Iterable<Character>[] result2 = test2(s1, s2);
         long diff2 = System.nanoTime() - nano2;
-        Log.i(result2[0].toString());
-        Log.i(result2[1].toString());
-        Log.i("test2 consumed: " + diff2 / 1000.0 + " x 10e-6 s.");
+        LogJava.i(result2[0].toString());
+        LogJava.i(result2[1].toString());
+        LogJava.i("test2 consumed: " + diff2 / 1000.0 + " x 10e-6 s.");
     }
 
     private Iterable<Character>[] test2(String string1, String string2) {

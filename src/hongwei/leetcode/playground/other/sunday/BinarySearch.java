@@ -2,7 +2,7 @@ package hongwei.leetcode.playground.other.sunday;
 
 import java.util.ArrayList;
 
-import hongwei.leetcode.playground.common.Log;
+import hongwei.leetcode.playground.common.LogJava;
 import hongwei.leetcode.playground.other.sort.QuickSort;
 
 public class BinarySearch {
@@ -13,7 +13,7 @@ public class BinarySearch {
         QuickSort quickSort = new QuickSort(l);
         quickSort.sort();
         list = (ArrayList<Integer>) quickSort.getResultList();
-        Log.i("sorted list: " + list.toString());
+        LogJava.i("sorted list: " + list.toString());
     }
 
     public int find(int number) {

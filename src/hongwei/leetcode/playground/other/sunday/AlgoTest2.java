@@ -1,6 +1,6 @@
 package hongwei.leetcode.playground.other.sunday;
 
-import hongwei.leetcode.playground.common.Log;
+import hongwei.leetcode.playground.common.LogJava;
 
 import java.util.ArrayList;
 
@@ -29,7 +29,7 @@ public class AlgoTest2 {
 
     public void runAlgo() {
         int result = funNoIter(4, 12);
-        Log.d("result = " + result);
+        LogJava.d("result = " + result);
         printSelArray();
     }
 
@@ -67,7 +67,7 @@ public class AlgoTest2 {
         int i = number, w = wSum;
         while (i-- > 0) {
             if (sel[i][w]) {
-                Log.d("" + weightArray.get(i));
+                LogJava.d("" + weightArray.get(i));
                 w -= weightArray.get(i);
             }
         }

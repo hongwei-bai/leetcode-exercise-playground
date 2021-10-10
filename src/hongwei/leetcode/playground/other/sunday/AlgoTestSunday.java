@@ -1,6 +1,6 @@
 package hongwei.leetcode.playground.other.sunday;
 
-import hongwei.leetcode.playground.common.Log;
+import hongwei.leetcode.playground.common.LogJava;
 
 import java.util.ArrayList;
 
@@ -35,6 +35,6 @@ public class AlgoTestSunday {
 //        list.add(25);
         binarySearch.init(list);
         int index = binarySearch.find(190);
-        Log.d("index = " + index);
+        LogJava.d("index = " + index);
     }
 }

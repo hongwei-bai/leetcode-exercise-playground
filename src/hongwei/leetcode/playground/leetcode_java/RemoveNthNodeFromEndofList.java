@@ -1,6 +1,6 @@
 package hongwei.leetcode.playground.leetcode_java;
 
-import hongwei.leetcode.playground.common.Log;
+import hongwei.leetcode.playground.common.LogJava;
 import hongwei.leetcode.playground.common.ListNode;
 import hongwei.leetcode.playground.IQuestion;
 
@@ -26,9 +26,9 @@ public class RemoveNthNodeFromEndofList implements IQuestion {
         for (int i = 0; i < 1; i++) {
             ListNode result = removeNthFromEnd(input, node);
             if (result != null && ref.equals(result)) {
-                Log.i("aaaa", "case[" + i + "] passed");
+                LogJava.i("aaaa", "case[" + i + "] passed");
             } else {
-                Log.e("aaaa", "!!!!![WRONG]case[" + i + "] failed, result: " + result);
+                LogJava.e("aaaa", "!!!!![WRONG]case[" + i + "] failed, result: " + result);
             }
         }
     }

@@ -1,6 +1,6 @@
 package hongwei.leetcode.playground.leetcode_java;
 
-import hongwei.leetcode.playground.common.Log;
+import hongwei.leetcode.playground.common.LogJava;
 import hongwei.leetcode.playground.IQuestion;
 
 import java.util.*;
@@ -25,7 +25,7 @@ public class Q3SumBrute implements IQuestion {
         for (int i = 0; i < input.length; i++) {
             List<List<Integer>> result = threeSum(input[i]);
 
-            Log.i("aaaa", "r: " + result.toString());
+            LogJava.i("aaaa", "r: " + result.toString());
 //            if (ref[i].equals(result)) {
 //                Log.i("aaaa", "case[" + i + "] passed");
 //            } else {

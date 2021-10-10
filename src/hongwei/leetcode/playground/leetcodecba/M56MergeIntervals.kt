@@ -1,52 +1,106 @@
 package hongwei.leetcode.playground.leetcodecba
 
 import hongwei.leetcode.playground.common.print
+import kotlin.experimental.or
 
 class M56MergeIntervals {
     fun test() {
 //        val input = arrayOf(intArrayOf(1, 3), intArrayOf(2, 6), intArrayOf(8, 10), intArrayOf(15, 18))
-        val input = arrayOf(intArrayOf(3, 4), intArrayOf(1, 1))
-//        val output = merge(input)
-//        output.print()
+//        val input = arrayOf(intArrayOf(5, 6), intArrayOf(3, 3), intArrayOf(4, 4), intArrayOf(1, 2))
+//        val input = arrayOf(intArrayOf(1, 4), intArrayOf(4, 5))
+        val input = arrayOf(intArrayOf(1, 4), intArrayOf(5, 6))
+//        val input = arrayOf(intArrayOf(2, 3), intArrayOf(5, 5), intArrayOf(2, 2), intArrayOf(3, 4), intArrayOf(3, 4))
+        val output = merge(input)
+        output.print()
+
+//        testFillArray()
+
+        // test
+//        var a = YES
+//        a  = a or OPEN
+//        println(a)
     }
 
-    fun mergeNotWorkForContinuousCloseInterval(intervals: Array<IntArray>): Array<IntArray> {
-        val result = mutableListOf<IntArray>()
-        val array = BooleanArray(10000) { false }
+//    companion object {
+//        /*
+//         open: 0x0001
+//         close: 0x0010
+//         point: ox0011
+//         mid: ox0111
+//         */
+//        private val NO: Byte = 0
+//        private const val OPEN: Byte = 1
+//        private const val CLOSE: Byte = 2
+//        private const val POINT: Byte = 3
+//        private const val YES: Byte = 7
+//    }
 
-        intervals.forEach { array.fill(true, it[0], it[1]) }
-
-        var startSaved = -1
-        var flag = false
-        array.forEachIndexed { i, value ->
-            if (flag != value) {
-                if (value) {
-                    startSaved = i
-                } else {
-                    result.add(intArrayOf(startSaved, i))
-                }
-                flag = value
-            }
-        }
-
-        return result.toTypedArray()
+    companion object {
+        /*
+         point: 0x0001
+         open: 0x0011
+         close: 0x0101
+         mid: ox0111
+         */
+        private val NO: Byte = 0
+        private const val POINT: Byte = 1
+        private const val OPEN: Byte = 3
+        private const val CLOSE: Byte = 5
+        private const val YES: Byte = 7
     }
 
-    fun mergeOnlyWorkForSequenced(intervals: Array<IntArray>): Array<IntArray> {
+    fun merge(intervals: Array<IntArray>): Array<IntArray> {
         val result = mutableListOf<IntArray>()
-        var cur = intervals.first()
-        for (interval in intervals) {
-            if (cur[1] >= interval[1]) {
-                // No-Op
-            } else if (cur[1] >= interval[0]) {
-                cur[1] = interval[1]
+        val array = ByteArray(10000) { NO }
+
+        intervals.forEach {
+            val open = it[0]
+            val close = it[1]
+            println("================= round ==================")
+            if (open == close) {
+                array[open] = array[open] or POINT
+                println("open==close: mark index[$open] to ${array[open]}")
             } else {
-                result.add(cur)
-                cur = interval
+                println("($open ~ $close)")
+                array[open] = array[open] or OPEN
+                println("open!=close: mark index[$open] to ${array[open]}")
+                array[close] = array[close] or CLOSE
+                println("open!=close: mark index[$close] to ${array[close]}")
+                if (open + 1 <= close) {
+                    array.fill(YES, open + 1, close)
+                    println("close > open + 1: mark {${open + 1} ~ ${close - 1}} as $YES")
+                }
+            }
+            debug(array)
+        }
+
+        var savedStart = -1
+        array.forEachIndexed { i, value ->
+            if (value == OPEN) {
+                savedStart = i
+            } else if (value == CLOSE) {
+                result.add(intArrayOf(savedStart, i))
+                savedStart = -1
+            } else if (value == POINT) {
+                result.add(intArrayOf(i, i))
             }
         }
-        result.add(cur)
         return result.toTypedArray()
+    }
+
+    fun testFillArray() {
+        val array = ByteArray(10) { 0 }
+        array.fill(1, 1, 3)
+        array.forEach {
+            print("$it ")
+        }
+    }
+
+    fun debug(a: ByteArray) {
+        for (i in 0..20) {
+            print("${a[i]} ")
+        }
+        println(" ")
     }
 }
 

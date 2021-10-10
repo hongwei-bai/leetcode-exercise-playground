@@ -1,6 +1,6 @@
 package hongwei.leetcode.playground.common;
 
-public class Log {
+public class LogJava {
     public static void d(String tag, String msg) {
         System.out.println("[" + tag + "]" + msg);
     }

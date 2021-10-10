@@ -1,6 +1,6 @@
 package hongwei.leetcode.playground.leetcode_java;
 
-import hongwei.leetcode.playground.common.Log;
+import hongwei.leetcode.playground.common.LogJava;
 import hongwei.leetcode.playground.IQuestion;
 
 /**
@@ -20,9 +20,9 @@ public class ContainerWithMostWater implements IQuestion {
         for (int i = 0; i < input.length; i++) {
             int result = maxArea(input[i]);
             if (ref[i] == result) {
-                Log.i("aaaa", "case[" + i + "] passed");
+                LogJava.i("aaaa", "case[" + i + "] passed");
             } else {
-                Log.e("aaaa", "!!!!![WRONG]case[" + i + "] failed.");
+                LogJava.e("aaaa", "!!!!![WRONG]case[" + i + "] failed.");
             }
         }
     }

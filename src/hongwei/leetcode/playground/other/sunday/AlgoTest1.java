@@ -1,6 +1,6 @@
 package hongwei.leetcode.playground.other.sunday;
 
-import hongwei.leetcode.playground.common.Log;
+import hongwei.leetcode.playground.common.LogJava;
 
 import java.util.Stack;
 
@@ -36,7 +36,7 @@ public class AlgoTest1 {
     }
 
     public void printResult() {
-        Log.i(result);
+        LogJava.i(result);
     }
 
 }

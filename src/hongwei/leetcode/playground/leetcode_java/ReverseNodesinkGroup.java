@@ -1,6 +1,6 @@
 package hongwei.leetcode.playground.leetcode_java;
 
-import hongwei.leetcode.playground.common.Log;
+import hongwei.leetcode.playground.common.LogJava;
 import hongwei.leetcode.playground.common.ListNode;
 import hongwei.leetcode.playground.IQuestion;
 
@@ -15,7 +15,7 @@ import hongwei.leetcode.playground.IQuestion;
 public class ReverseNodesinkGroup implements IQuestion {
     @Override
     public void run() {
-        Log.i("aaaa", "------- run -------");
+        LogJava.i("aaaa", "------- run -------");
         ListNode[] input = new ListNode[]{
 //                new ListNode(new int[]{1, 2, 3, 4, 5}),
                 new ListNode(new int[]{1, 2, 3, 4, 5, 6, 7}),
@@ -31,9 +31,9 @@ public class ReverseNodesinkGroup implements IQuestion {
         for (int i = 0; i < input.length; i++) {
             ListNode result = reverseKGroup(input[i], input2[i]);
             if (result.equals(ref[i])) {
-                Log.i("aaaa", "case[" + i + "] passed");
+                LogJava.i("aaaa", "case[" + i + "] passed");
             } else {
-                Log.e("aaaa", "!!!!![WRONG]case[" + i + "] failed, result: " + result);
+                LogJava.e("aaaa", "!!!!![WRONG]case[" + i + "] failed, result: " + result);
             }
         }
     }
@@ -93,7 +93,7 @@ public class ReverseNodesinkGroup implements IQuestion {
         [1] tail
       */
     ListNode[] reverse(ListNode head, int from, int to) {
-        Log.i("aaaa", "call reverse [" + from + ", " + to + "], list: " + head.toString());
+        LogJava.i("aaaa", "call reverse [" + from + ", " + to + "], list: " + head.toString());
         ListNode pFront = null;
         ListNode p = head;
         ListNode pBack = null;

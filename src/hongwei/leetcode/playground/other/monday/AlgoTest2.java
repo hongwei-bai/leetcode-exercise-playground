@@ -1,6 +1,6 @@
 package hongwei.leetcode.playground.other.monday;
 
-import hongwei.leetcode.playground.common.Log;
+import hongwei.leetcode.playground.common.LogJava;
 
 public class AlgoTest2 {
 
@@ -8,7 +8,7 @@ public class AlgoTest2 {
 
         int lLength = (a.length - 1) * a.length / 2;
         if (k > lLength || k <= 0) {
-            Log.i("L does not have the " + k + "th elements!");
+            LogJava.i("L does not have the " + k + "th elements!");
             return -1;
         }
 

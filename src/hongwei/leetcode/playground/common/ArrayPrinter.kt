@@ -9,3 +9,9 @@ fun Array<IntArray>.print() {
         println(stringBuilder)
     }
 }
+
+fun IntArray.print() {
+    val stringBuilder = StringBuilder()
+    forEach { stringBuilder.append(it).append(" ") }
+    println(stringBuilder)
+}

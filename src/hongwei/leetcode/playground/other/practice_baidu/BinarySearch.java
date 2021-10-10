@@ -1,6 +1,6 @@
 package hongwei.leetcode.playground.other.practice_baidu;
 
-import hongwei.leetcode.playground.common.Log;
+import hongwei.leetcode.playground.common.LogJava;
 
 public class BinarySearch {
     public int binarySearch(int[] a, int k) {
@@ -29,6 +29,6 @@ public class BinarySearch {
         for (int i : r) {
             System.out.print(i + " ");
         }
-        Log.d("find = " + f);
+        LogJava.d("find = " + f);
     }
 }

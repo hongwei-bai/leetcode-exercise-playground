@@ -1,6 +1,6 @@
 package hongwei.leetcode.playground.other.monday;
 
-import hongwei.leetcode.playground.common.Log;
+import hongwei.leetcode.playground.common.LogJava;
 
 public class AlgoTestMonday {
     private final static boolean runTest1 = true;
@@ -11,7 +11,7 @@ public class AlgoTestMonday {
         if (runTest1) {
             AlgoTest1 algoTest1 = new AlgoTest1();
             String result = algoTest1.combine("abc", "cbad");
-            Log.i("[Test2]" + result);
+            LogJava.i("[Test2]" + result);
         }
 
         if (runTest2) {
@@ -20,7 +20,7 @@ public class AlgoTestMonday {
             int k = 4;
             int result = algoTest2.getKthLargestInMultiplyArrayOf(a, k);
             if (result > 0) {
-                Log.i("[Test2]The " + k + "th largest value in L is " + result);
+                LogJava.i("[Test2]The " + k + "th largest value in L is " + result);
             }
         }
 

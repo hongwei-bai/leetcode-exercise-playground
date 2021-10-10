@@ -1,12 +1,12 @@
 package hongwei.leetcode.playground.leetcode_java;
 
 import hongwei.leetcode.playground.IQuestion;
-import hongwei.leetcode.playground.common.Log;
+import hongwei.leetcode.playground.common.LogJava;
 
 public class SearchinRotatedSortedArray implements IQuestion {
     @Override
     public void run() {
-        Log.i("aaaa", "------- run -------");
+        LogJava.i("aaaa", "------- run -------");
         int[][] input = new int[][]{{4, 5, 6, 7, 0, 1, 2}, {4, 5, 6, 7, 0, 1, 2}};
         int[] input2 = new int[]{0, 3};
         int[] ref = new int[]{4, -1};
@@ -14,9 +14,9 @@ public class SearchinRotatedSortedArray implements IQuestion {
         for (int i = 0; i < input.length; i++) {
             int result = search(input[i], input2[i]);
             if (result == ref[i]) {
-                Log.i("aaaa", "case[" + i + "] passed");
+                LogJava.i("aaaa", "case[" + i + "] passed");
             } else {
-                Log.e("aaaa", "!!!!![WRONG]case[" + i + "] failed, result: " + result);
+                LogJava.e("aaaa", "!!!!![WRONG]case[" + i + "] failed, result: " + result);
             }
         }
     }
@@ -61,7 +61,7 @@ public class SearchinRotatedSortedArray implements IQuestion {
         int vlo = 0;
         int vhi = length - 1;
         while (vlo < vhi) {
-            Log.i("while(" + vlo + " ~ " + vhi + ")");
+            LogJava.i("while(" + vlo + " ~ " + vhi + ")");
             int vmid = (vhi - vlo + 1) / 2 + vlo;
             int midVal = getValByVirtualPos(nums, length, pivot, vmid);
             if (target == midVal) {
